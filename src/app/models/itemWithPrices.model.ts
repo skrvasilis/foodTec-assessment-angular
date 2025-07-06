@@ -6,6 +6,6 @@ export interface ItemWithPrices {
     name: string;
     price: number;
     enabled: boolean;
-    previousPrice?: number;
+    previousPrice: number;
   }[];
 }

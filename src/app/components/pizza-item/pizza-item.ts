@@ -15,7 +15,6 @@ export class PizzaItem {
   @Output() expand = new EventEmitter<number>();
   @Output() update = new EventEmitter<ItemWithPrices>();
   @Output() undo = new EventEmitter<number>();
-  priceValue = signal('');
 
   toggleSize(index: number) {
     const size = this.item.sizes[index];
@@ -30,8 +29,9 @@ export class PizzaItem {
       // Restore saved price if it exists
       if (typeof size.previousPrice === 'number') {
         size.price = size.previousPrice;
+        size.previousPrice = 0
       } else {
-        size.price = 0;
+        size.price = 0
       }
     }
 

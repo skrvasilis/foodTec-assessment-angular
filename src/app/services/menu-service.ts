@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import { ItemWithPrices } from '../models/itemWithPrices.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MenuService {
-
   private key = 'pizzaMenu';
 
   save(items: ItemWithPrices[]): void {
@@ -14,6 +13,7 @@ export class MenuService {
 
   load(): ItemWithPrices[] | null {
     const data = localStorage.getItem(this.key);
+
     return data ? JSON.parse(data) : null;
   }
 
@@ -21,6 +21,5 @@ export class MenuService {
     localStorage.removeItem(this.key);
   }
 
-  constructor() { }
+  constructor() {}
 }
-

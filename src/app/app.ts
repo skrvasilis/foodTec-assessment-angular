@@ -66,6 +66,7 @@ export class App implements OnInit {
           name: size.name,
           price: priceEntry?.price || 0,
           enabled: true,
+          previousPrice: 0,
         };
       });
 
