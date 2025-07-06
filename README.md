@@ -36,3 +36,6 @@ Given the data and their models: data.ts
 npm install
 npm start 
 ```
+## live version : 
+
+https://food-tec-assessment-angular.vercel.app
